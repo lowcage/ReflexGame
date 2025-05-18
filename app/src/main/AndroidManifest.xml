@@ -3,6 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.reflexgame">
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,6 +20,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ReflexGame"
         tools:targetApi="31">
+
+        <receiver android:name=".ReminderReceiver" android:exported="false"/>
 
         <activity android:name=".MainActivity" android:exported="true">
 
@@ -26,6 +35,8 @@
         </activity>
 
         <activity android:name=".LoginActivity" />
+
+        <activity android:name=".GameActivity" />
 
 
     </application>

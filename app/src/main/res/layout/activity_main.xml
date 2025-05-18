@@ -9,6 +9,24 @@
     android:background="#F5F5F5"
     >
 
+    <ImageView
+        android:id="@+id/profileImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/ic_launcher_round"
+        android:scaleType="centerCrop"
+        android:background="@android:color/darker_gray"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/takePhotoBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profilkép készítése"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp" />
+
     <TextView
         android:id="@+id/welcomeText"
         android:layout_width="wrap_content"
@@ -17,12 +35,64 @@
         android:textSize="18sp"
         android:layout_gravity="center_horizontal"/>
 
-    <Button
-        android:id="@+id/logoutBtn"
+    <TextView
+        android:id="@+id/bestRecordText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Kijelentkezés"
+        android:text="Legjobb idő: -"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:id="@+id/deleteBestRecordBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Legjobb idő törlése"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="24dp"/>
+        android:layout_marginTop="8dp" />
+
+
+    <TextView
+        android:id="@+id/topResults"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Top 3 eredmény:"
+        android:layout_marginTop="32dp" />
+
+    <TextView
+        android:id="@+id/recentResults"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Legutóbbi 5:"
+        android:layout_marginTop="24dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp">
+
+        <Button
+            android:id="@+id/deleteRecordsBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rekordok törlése"
+            android:layout_marginEnd="16dp" />
+
+        <Button
+            android:id="@+id/logoutBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kijelentkezés" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/startGameBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Játék indítása"
+        android:layout_marginTop="32dp" />
 </LinearLayout>
 
